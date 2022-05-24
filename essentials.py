@@ -37,4 +37,4 @@ user_name = input("What's your name\n---->")
 if user_name == "Santiago":
     print("Hello Santiago")
 else:
-    "We dont recognize you"
+    print("We dont recognize you")
