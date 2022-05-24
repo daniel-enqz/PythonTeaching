@@ -37,6 +37,7 @@ for i in range(len(parts)):
     user_choice = input("----->")
     user_parts.append(parts[current_part][i-1])
 
+# Final output
 print("Congrats {}, here's your computer".format(user_name))
 for i in range(len(order)):
     current_part = order[i]
