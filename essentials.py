@@ -38,3 +38,10 @@ if user_name == "Santiago":
     print("Hello Santiago")
 else:
     print("We dont recognize you")
+
+# MORE EXAMPLES:
+
+
+# ------------------A LITTLE MORE ABOUT ARRAYS-------------------------
+                #""
+computers = ["Lenovo", "Apple", "Razer", "Logitech", "RTX"]
