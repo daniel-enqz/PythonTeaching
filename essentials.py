@@ -23,12 +23,18 @@ user_name = "Comanche"
 
 
 # ---------------------BUT HOW DO WE SHOW THEM?----------------------------PRINT IN CONSOLE!!!------------------
-print(user_name)
+# print(user_name)
 # You can print whatever you want, not only variables!!!
 
 
 # To run a program open your terminal, type and type ------------>  python3 essentials.py
 
 # ---------------------CAN WE GET INPUT FROM USER?------------------------YES!!! WITH INPUT------------------
-user_name = (input("What's your name\n---->"))
-print(user_name)
+user_name = input("What's your name\n---->")
+# print(user_name)
+
+# LAST BUT NOT LEAST, SOME LOGIC....
+if user_name == "Santiago":
+    print("Hello Santiago")
+else:
+    "We dont recognize you"
