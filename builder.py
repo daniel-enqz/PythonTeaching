@@ -35,7 +35,7 @@ for i in range(len(parts)):
     for i in range(len(parts[current_part])):
         print([i + 1], parts[current_part][i][0], "Price: ${}".format(parts[current_part][i][1]))
     user_choice = 10
-    while user_choice > len(parts[current_part]) or user_choice < 0:
+    while user_choice > len(parts[current_part]) or user_choice <= 0:
         user_choice = int(input("----->"))
     user_parts.append(parts[current_part][user_choice -1][0])
     user_price += parts[current_part][user_choice -1][1]
