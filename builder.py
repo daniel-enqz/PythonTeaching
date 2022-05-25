@@ -10,7 +10,6 @@ class color:
     CYAN = '\033[96m'
     BLANCO = '\033[98m'
 
-
 # Options
 parts = {
   "CPU": [["Rayzen7", 5000], ["CoreI7", 6000], ["Rayzen5", 2000]],
