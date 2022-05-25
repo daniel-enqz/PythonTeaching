@@ -16,7 +16,7 @@ parts = {
   "CPU": [["Rayzen7", 5000], ["CoreI7", 6000], ["Rayzen5", 2000]],
   "MOTHERBOARD": [["Gigabyte Z690 Aorus Pro", 7000], ["ASRock Z690 Taichi", 10000]],
   "GPU_GRAPHIC_CARD": [["Nvidia GeForce RTX 3090 Ti", 32000], ["Nvidia GeForce RTX 3080", 16000]],
-  "RAM": [[8, 4500], [16, 5000], [32, 10000]],
+  "RAM": [["8GB", 4500], ["16GB", 5000], ["32GB", 10000]],
   "PRIMARY_STORAGE_SSD": [["WD Black SN850", 7250], ["WD Black SN770", 8345]],
   "PSU": [["Corsair RM750x", 13200], ["Seasonic Prime Titanium TX-1000", 8450]], # Power Supply
   "CASE": [["Fractal Design Meshify 2 Compact", 3400], ["Lian Li O11 Air Mini", 5500]]
@@ -32,15 +32,17 @@ print("Choose your preferred number")
 
 for i in range(len(parts)):
     current_part = order[i]
-    print("Choose your {}".format(current_part))
+    print("✅ Choose your {}".format(current_part))
     for i in range(len(parts[current_part])):
-        print([i + 1], parts[current_part][i][0], "Price:", parts[current_part][i][1])
-    user_choice = int(input("----->"))
-    user_parts.append(parts[current_part][user_choice-1][0])
-    user_price += parts[current_part][user_choice-1][1]
+        print([i + 1], parts[current_part][i][0], "Price: ${}".format(parts[current_part][i][1]))
+    user_choice = 10
+    while user_choice > len(parts[current_part]):
+        user_choice = int(input("----->"))
+    user_parts.append(parts[current_part][user_choice -1][0])
+    user_price += parts[current_part][user_choice -1][1]
 # Final output
-print("Congrats {}, here's your computer".format(user_name))
+print("Congrats {}, here's your computer ❤️".format(user_name))
 for i in range(len(order)):
     current_part = order[i]
-    print("Your {}:".format(current_part), user_parts[i])
-print("Final Price: ${}".format(user_price))
+    print("✅ Your {}:".format(current_part), user_parts[i])
+print("🏔️ Final Price: ${}".format(user_price))
