@@ -13,7 +13,7 @@ class color:
 
 # Options
 parts = {
-  "CPU": ["Rayzen7", "CoreI7", "Rayzen5"],
+  "CPU": [["Rayzen7", 5000], ["CoreI7", 6000], ["Rayzen5", 2000]],
   "MOTHERBOARD": ["Gigabyte Z690 Aorus Pro", "ASRock Z690 Taichi"],
   "GPU_GRAPHIC_CARD": ["Nvidia GeForce RTX 3090 Ti", "Nvidia GeForce RTX 3080"],
   "RAM": [8, 16, 32],
@@ -25,6 +25,7 @@ order = ["CPU", "MOTHERBOARD", "GPU_GRAPHIC_CARD", "RAM", "PRIMARY_STORAGE_SSD",
 
 # User Interaction
 user_parts = []
+user_price = 0
 user_name = (input("What's your name?\n ------>"))
 print("Welcome {}, this is Computer Builder".format(user_name))
 print("Choose your preferred number")
@@ -33,12 +34,13 @@ for i in range(len(parts)):
     current_part = order[i]
     print("Choose your {}".format(current_part))
     for i in range(len(parts[current_part])):
-        print([i + 1], parts[current_part][i])
+        print([i + 1], parts[current_part][i][i], "Price:", parts[current_part][i][i+1])
     user_choice = input("----->")
-    user_parts.append(parts[current_part][i-1])
-
+    user_parts.append(parts[current_part][user_choice-1][0])
+    user_price += parts[current_part][user_choice-1][1]
 # Final output
 print("Congrats {}, here's your computer".format(user_name))
 for i in range(len(order)):
     current_part = order[i]
     print("Your {}:".format(current_part), user_parts[i])
+print("Final Price: ${}".format(user_price))
