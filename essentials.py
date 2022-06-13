@@ -37,8 +37,7 @@ print("Welcome to PC Builder")
 user_name = input("Cuál es tu nombre?\n----->")
 
 if user_name == "Comanche":
-
-print(f"Welcome to PC Builder, {user_name}")
+    print(f"Welcome to PC Builder, {user_name}")
 
 # LAST BUT NOT LEAST, SOME LOGIC....
 if user_name == "Santiago":
